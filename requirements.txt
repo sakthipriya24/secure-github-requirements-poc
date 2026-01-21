@@ -1,0 +1,14 @@
+# Example requirements.txt with GitHub environment variable placeholders
+# This demonstrates how to use secure credentials in requirements.txt
+
+# Standard public packages
+Django==5.0.3
+requests==2.32.2
+python-decouple==3.8
+
+# Private GitHub packages using environment variables
+# These will be replaced by install_requirements.py script
+git+https://${GITHUB_USERNAME}:${GITHUB_PAT}@github.com/${GITHUB_USERNAME}/private-package-1
+git+https://${GITHUB_USERNAME}:${GITHUB_PAT}@github.com/${GITHUB_USERNAME}/private-package-2
+
+# Note: Replace the package names above with your actual private repositories
